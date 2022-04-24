@@ -32,6 +32,14 @@ function permutator<T>(inputArr: T[]) {
     return result;
 }
 
+function convertToString(timeInSeconds: number) {
+    const minutes = Math.floor(timeInSeconds / 60);
+    const remainingSeconds = timeInSeconds - minutes * 60;
+    const seconds = Math.floor(remainingSeconds);
+    const milliSeconds = 1000 * (remainingSeconds - seconds);
+    return `${minutes}:${seconds},${`${milliSeconds}`.substring(0, 2)}`;
+}
+
 function convertToSeconds(value?: string) {
     if (value == null || value.length === 0) {
         return null;
@@ -171,7 +179,7 @@ export const TimesCalculator: React.FC<TimesCalculatorProps> = memoComponent('Ti
 
                             return (
                                 <tr>
-                                    <th style={{ width: '20%' }}>{o.timeInSeconds} Sekunden</th>
+                                    <th style={{ width: '20%' }}>{convertToString(o.timeInSeconds)}</th>
                                     <th style={{ width: '20%' }}>{names[first]}</th>
                                     <th style={{ width: '20%' }}>{names[second]}</th>
                                     <th style={{ width: '20%' }}>{names[third]}</th>

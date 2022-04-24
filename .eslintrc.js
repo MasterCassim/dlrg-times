@@ -76,6 +76,7 @@ module.exports = {
 
                 'arrow-body-style': 'off',
                 'max-len': 'off',
+                'prettier/prettier': 'off',
 
                 'react/function-component-definition': [
                     'error',

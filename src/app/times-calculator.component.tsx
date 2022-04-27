@@ -12,12 +12,24 @@ const DEFAULT_VALUE: Record<number, [string, string, string, string]> = {
     5: ['', '', '', ''],
 };
 
+function printMillis(milliseconds: number) {
+    if (milliseconds >= 100) {
+        return milliseconds.toFixed(0).substring(0, 2);
+    }
+
+    if (milliseconds >= 10) {
+        return `0${milliseconds.toFixed(0).substring(0, 1)}`;
+    }
+
+    return '00';
+}
+
 function convertToString(timeInSeconds: number) {
     const minutes = Math.floor(timeInSeconds / 60);
     const remainingSeconds = timeInSeconds - minutes * 60;
     const seconds = Math.floor(remainingSeconds);
     const milliSeconds = 1000 * (remainingSeconds - seconds);
-    return `${minutes}:${seconds},${`${milliSeconds}`.substring(0, 2)}`;
+    return `${minutes}:${seconds},${printMillis(milliSeconds)}`;
 }
 
 function convertToSeconds(value?: string) {

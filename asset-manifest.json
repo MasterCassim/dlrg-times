@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/dlrg-times/static/css/main.8a685450.css",
-    "main.js": "/dlrg-times/static/js/main.9509d539.js",
+    "main.js": "/dlrg-times/static/js/main.3ef658be.js",
     "index.html": "/dlrg-times/index.html",
     "main.8a685450.css.map": "/dlrg-times/static/css/main.8a685450.css.map",
-    "main.9509d539.js.map": "/dlrg-times/static/js/main.9509d539.js.map"
+    "main.3ef658be.js.map": "/dlrg-times/static/js/main.3ef658be.js.map"
   },
   "entrypoints": [
     "static/css/main.8a685450.css",
-    "static/js/main.9509d539.js"
+    "static/js/main.3ef658be.js"
   ]
 }

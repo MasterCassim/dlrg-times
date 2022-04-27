@@ -110,10 +110,12 @@ export const TimesCalculator: React.FC<TimesCalculatorProps> = memoComponent('Ti
                 <thead>
                     <tr style={{ width: '100%' }}>
                         <th style={{ width: '20%' }}>Schwimmer</th>
+                        {/* eslint-disable jsx-a11y/control-has-associated-label */}
                         <th style={{ width: '20%' }}><TextField value="Zeit 1" /></th>
                         <th style={{ width: '20%' }}><TextField value="Zeit 2" /></th>
                         <th style={{ width: '20%' }}><TextField value="Zeit 3" /></th>
                         <th style={{ width: '20%' }}><TextField value="Zeit 4" /></th>
+                        {/* eslint-enable jsx-a11y/control-has-associated-label */}
                     </tr>
                 </thead>
                 <tbody>
